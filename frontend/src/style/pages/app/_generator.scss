@@ -1,0 +1,396 @@
+.generator {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	background-image: url("../assets/images/bg_web.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		background: none;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		background: none;
+	}
+
+	&__input {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+
+		width: 50%;
+
+		padding: 2rem;
+
+		min-height: 100vh;
+
+		@media (max-width: 1024px) {
+			width: 100%;
+			padding: 1rem;
+			min-height: auto;
+		}
+
+		@media (max-width: 768px) {
+			padding: 1rem;
+			width: 100%;
+		}
+
+		&-actions {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			align-self: flex-end;
+
+			gap: 1rem;
+
+			margin-bottom: 2rem;
+
+			button {
+				cursor: pointer;
+
+				padding: 0.5rem;
+
+				border-radius: 1rem;
+				font-weight: 600;
+				font-family: "Inter", sans-serif;
+				font-size: 14px;
+
+				a {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					gap: 0.5rem;
+
+					text-decoration: none;
+				}
+
+				&:hover {
+					transform: translateY(-2px);
+					transition: transform 100ms ease;
+					box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+				}
+
+				&:active {
+					transform: translateY(2px);
+					transition: transform 100ms ease;
+				}
+			}
+
+			&-login {
+				background-color: $Gray50;
+				border: 1px solid $Gray400;
+
+				a {
+					color: $Gray700;
+					stroke: $Gray700;
+				}
+			}
+
+			&-logout {
+				background-color: $Gray100;
+				border: 1px solid $Gray500;
+
+				a {
+					color: $Gray800;
+					stroke: $Gray800;
+				}
+			}
+
+			&-coins {
+				background-color: #ffffff;
+				border: 1px solid $Pink500;
+
+				a{
+					color: $Pink800;
+				}
+			}
+		}
+
+		&-title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			text-align: center;
+
+			margin-bottom: 2rem;
+
+			img {
+				width: 100%;
+			}
+
+			p {
+				font-size: 14px;
+				color: $Gray600;
+				line-height: 1.25;
+				width: 70%;
+
+				@media (max-width: 768px) {
+					width: 90%;
+				}
+			}
+		}
+
+		&-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			width: 100%;
+
+			margin-bottom: 2rem;
+
+			&-row {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				width: 100%;
+
+				gap: 2rem;
+
+				@media (max-width: 768px) {
+					flex-direction: column;
+					gap: 0;
+				}
+
+				&-input {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: center;
+
+					margin-bottom: 1rem;
+
+					@media (max-width: 768px) {
+						width: 100%;
+					}
+
+					label {
+						margin-bottom: 0.2rem;
+
+						span {
+							color: $Pink600;
+							font-size: 20px;
+						}
+					}
+
+					input {
+						border: 1px solid $Gray400;
+						border-radius: 0.5rem;
+
+						padding: 0.5rem 1rem;
+						width: 256px;
+						height: 36px;
+						outline: $Pink500;
+
+						@media (max-width: 768px) {
+							width: 100%;
+						}
+					}
+
+					textarea {
+						width: calc(2rem + 512px);
+						height: 16rem;
+
+						border: 1px solid $Gray400;
+						border-radius: 0.5rem;
+
+						padding: 0.5rem 1rem;
+
+						resize: none;
+
+						@media (max-width: 768px) {
+							width: 100%;
+						}
+					}
+				}
+			}
+
+			&-submit {
+				cursor: pointer;
+
+				width: calc(2rem + 512px);
+
+				padding: 0.5rem 1rem;
+
+				background-color: $Gray900;
+				color: #ffffff;
+
+				font-size: 16px;
+				font-weight: 600;
+
+				border-radius: 0.5rem;
+
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+
+				&:hover {
+					transform: translateY(-2px);
+					transition: transform 100ms ease;
+					box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+				}
+
+				&:active {
+					transform: translateY(2px);
+					transition: transform 100ms ease;
+				}
+			}
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			width: 100%;
+
+			gap: 1rem;
+
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
+
+			&-text {
+				display: flex;
+				flex-direction: row;
+
+				@media (max-width: 768px) {
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 0.5rem;
+				}
+
+				p {
+					color: $Gray600;
+				}
+
+				svg {
+					margin-inline: 0.5rem;
+
+					@media (max-width: 768px) {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				a {
+					color: $Gray800;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	&__output {
+		width: 50%;
+		min-height: 100vh;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+
+		border-left: 1px solid #222222;
+
+		padding: 2rem;
+
+		@media (max-width: 1024px) {
+			width: 100%;
+			border: none;
+			padding: 1rem;
+			min-height: auto;
+		}
+
+		@media (max-width: 768px) {
+			width: 100%;
+			border: none;
+			padding: 1rem;
+		}
+
+		&-buttons {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+
+			align-self: flex-end;
+
+			margin-bottom: 2rem;
+
+			@media (max-width: 768px) {
+				align-self: center;
+			}
+
+			button {
+				cursor: pointer;
+
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 0.5rem;
+
+				padding: 0.5rem;
+
+				border-radius: 1rem;
+				font-weight: 600;
+				font-family: "Inter", sans-serif;
+				font-size: 14px;
+
+				background-color: $Gray900;
+				border: 1px solid $Gray900;
+
+				color: #ffffff;
+				stroke: #ffffff;
+
+				&:hover {
+					transform: translateY(-2px);
+					transition: transform 100ms ease;
+					box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+				}
+
+				&:active {
+					transform: translateY(2px);
+					transition: transform 100ms ease;
+				}
+			}
+		}
+
+		&-field {
+			width: 100%;
+
+			textarea {
+				width: 100%;
+				min-height: 768px;
+				border: none;
+				padding: 1rem;
+
+				font-size: 1rem;
+				font-family: "Times New Roman", Times, serif;
+
+				background: transparent;
+				resize: none;
+			}
+		}
+	}
+}
